@@ -37,3 +37,15 @@ target_include_directories(rnnoise PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
         $<INSTALL_INTERFACE:include>
         PRIVATE src)
+
+install(TARGETS rnnoise EXPORT rnnoise_target
+    LIBRARY       DESTINATION ${CMAKE_INSTALL_LIBDIR}
+)
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
+    DESTINATION "include")
+
+install(EXPORT rnnoise_target
+    FILE rnnoise.cmake
+    DESTINATION lib/cmake/rnnoise
+)
