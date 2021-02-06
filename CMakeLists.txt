@@ -46,6 +46,6 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
     DESTINATION "include")
 
 install(EXPORT rnnoise_target
-    FILE rnnoise.cmake
+    FILE rnnoiseConfig.cmake
     DESTINATION lib/cmake/rnnoise
 )
