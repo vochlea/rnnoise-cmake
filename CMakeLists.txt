@@ -7,8 +7,10 @@ if(RNNOISE_COMPILE_OPUS)
 	add_definitions(-DCOMPILE_OPUS)
 endif()
 
-# Ignore CRT warnings
-add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+# Ignore CRT warnings on MSVC
+if(MSVC)
+  add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+endif()
 
 # Get source files
 file(GLOB SOURCES "src/*.c" "src/*.h" "include/*.h")
