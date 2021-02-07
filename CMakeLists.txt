@@ -34,6 +34,8 @@ if(BUILD_SHARED_LIBS)
   endif()
 endif()
 
+include(GNUInstallDirs)
+
 # Include dirs
 target_include_directories(rnnoise PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
@@ -41,7 +43,8 @@ target_include_directories(rnnoise PUBLIC
         PRIVATE src)
 
 install(TARGETS rnnoise EXPORT rnnoise_target
-    LIBRARY       DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
 )
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
