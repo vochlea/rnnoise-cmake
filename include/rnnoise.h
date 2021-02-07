@@ -30,10 +30,6 @@
 
 #include <stdio.h>
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #ifndef RNNOISE_EXPORT
 # if defined(WIN32)
 #  if defined(RNNOISE_BUILD) && defined(DLL_EXPORT)
