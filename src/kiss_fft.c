@@ -515,6 +515,7 @@ void opus_fft_free(const kiss_fft_state *cfg, int arch)
 
 #endif /* CUSTOM_MODES */
 
+#define COMPILE_OPUS
 #ifdef COMPILE_OPUS
 void opus_fft_impl(const kiss_fft_state *st,kiss_fft_cpx *fout)
 {
